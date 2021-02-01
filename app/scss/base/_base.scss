@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    @include font-family(body);
+    @include font-size(delta);
+    line-height: 1.9;
+    color: color(secondary, a);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start]   repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+    grid-template-rows: 10rem 70vh repeat(4, min-content);
+
+
+    @include respond(small){
+        grid-template-rows: 8.5rem calc(100vh - 8.5rem) repeat(4, min-content);
+    }
+}

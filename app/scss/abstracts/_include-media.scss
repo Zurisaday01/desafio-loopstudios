@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+
+$breakpoints: (
+  'x-tiny'  : ( max-width: 24.5em ), //392px
+  'tiny'  : ( max-width: 26.875em ), //430px
+  's-small'  : ( max-width: 35em ), //560px
+  'small'  : ( max-width: 39.375em ), //630px
+  'm-small'  : ( max-width: 41.6875em ), //667px
+  'l-small'  : ( max-width: 45em ), //720px
+  'xl-small' : ( max-width: 49.375em ), //790px.
+  's-medium' : ( max-width: 53.75em ), //860px.
+  'medium' : ( max-width: 56.25em ), //900px
+  'xl-medium'  : ( max-width: 63.75em ) //1020px
+) !default;
+
+
+@mixin respond($bp) {
+
+  //Recupera el valor de la clave
+  $value: map-get($breakpoints, $bp);
+
+
+  // Si la clave existe en el mapa
+  @if $value != null {
+    // Imprime una consula de medios basada en ese valor
+    @media only screen and #{inspect(map-get($breakpoints, $bp))} { @content };
+  }
+
+
+  //Si la clave no existe en el mapa
+  @else {
+    @warn "Desafortunadamente, la clave no se encuentra en el mapa`#{$breakpoints}`. "
+        + "Por favor asegurese de que la clave se encuentre en el mapa `$breakpoints`";
+  }
+}
+
+
+/*
+# Ejemplo de llamado
+
+@include respond(large){
+  background-color: violet;
+}
+*/

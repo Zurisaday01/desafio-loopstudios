@@ -1,0 +1,93 @@
+.creations{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    justify-content: center;
+    gap: 3rem;
+
+    &__card{
+        width: 100%;
+        height: 48rem;
+        position: relative;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        cursor: pointer;
+
+        @include respond(m-small){
+            height: 35vw;
+        }
+        
+        &--1{
+            @include background-image('../../../images/desktop/image-deep-earth.jpg');
+        }
+        
+        &--2{
+            @include background-image('../../../images/desktop/image-night-arcade.jpg');
+        }
+        
+        &--3{
+            @include background-image('../../../images/desktop/image-soccer-team.jpg');
+        }
+        
+        &--4{
+            @include background-image('../../../images/desktop/image-grid.jpg');
+        }
+        
+        &--5{
+            @include background-image('../../../images/desktop/image-from-above.jpg');
+        }
+        
+        &--6{
+            @include background-image('../../../images/desktop/image-pocket-borealis.jpg');
+        }
+        
+        &--7{
+            @include background-image('../../../images/desktop/image-curiosity.jpg');
+        }
+
+        &--8{
+            @include background-image('../../../images/desktop/image-fisheye.jpg');
+        }
+        
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(color(primary, b), 0.7);
+            opacity: 0;
+            transition: all .3s;
+        }
+
+        &:hover:after {
+            opacity: 1;
+        }
+
+    }
+    
+    
+    &__title{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: color(primary, b);
+        padding: 3.5rem;
+        width: 90%;
+        z-index: 1000;
+        transition: all .3s;
+
+        @include respond(small){
+            padding: 2rem;
+            width: 50%;
+        }
+    }
+
+    &__card:hover  &__title{
+        color: color(primary, a);
+    }
+}

@@ -1,0 +1,10 @@
+.header{
+    grid-column: center-start / center-end;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+
+ 
+}

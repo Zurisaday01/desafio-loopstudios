@@ -1,0 +1,200 @@
+.nav{
+    // Para hacer el menu móvil ------------
+
+    // El checkbox activará el menú movil pero no se le puede modificar sus estilos por eso se debe desaparecer
+    &__checkbox{
+        display: none;
+    }
+
+    // Este es el label, el que será el botón
+    &__btn{
+        display: none;
+    }
+
+    // -------------------------------------
+
+    &__list{
+        display: flex;
+        list-style: none;
+        color: color(primary, b);
+    }
+    
+    &__item{
+        position: relative;
+        padding: 7px 1rem;
+        cursor: pointer;
+
+        &:not(:last-child){
+            margin-right: 1.1rem;
+
+            @include respond(s-small){
+                margin: 0;
+            }
+        }
+        
+        &::after{
+            content: "";
+            display: block;
+            height: 2px;
+            width: 35%;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            transition: all .3s;
+            background-color: currentColor;
+            opacity: 0;
+        }
+        &:hover::after{
+            opacity: 1;
+        }
+    }
+
+    &__link{
+        text-decoration: none;
+        color: currentColor;
+    }
+
+
+// Media quieries -----------------------------------------
+
+    @include respond(medium){
+
+
+        // Este es el label, el que será el botón
+
+        &__btn{
+            position: relative;
+            display: block;
+            height: 3rem;
+            width: 3rem;
+            margin-bottom: 8px;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 20000;
+        }
+        
+        
+        &__icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            &,
+            &::after,
+            &::before {
+                width: 2.5rem;
+                height: 2px;
+                background-color: color(primary, b);
+                display: inline-block;
+            }
+
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition: all .2s;
+            }
+
+            &::before { top: -.8rem; }
+
+            &::after { top: .8rem; }
+        }
+
+        &__nav{
+            position: absolute;
+            top: 0;
+            left: 5rem;
+            transform: translateY(15rem);
+            z-index: 2000;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .2s;
+
+
+            @include respond(small){
+                transform: translateY(20rem);   
+            }
+        }
+
+        &__list{
+
+            &--hamburger{
+                flex-direction: column;
+                text-transform: uppercase;
+    
+                @include font-family(heading);
+                font-size: clamp(get-font-size(delta), 5vw, get-font-size(gamma)); 
+            }
+
+            &--footer{
+
+                @include respond(s-small){
+                    flex-direction: column;
+                    align-items: center;
+                    align-content: center;
+                }
+            }
+
+        }
+
+        &__item{
+
+            &--hamburger{
+                position: relative;
+                padding: 7px;
+                cursor: pointer;
+                margin: 0;
+                
+                &::after{
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    width: 35%;
+                    position: absolute;
+                    left: 23%;
+                    bottom: 0;
+                    transition: all .3s;
+                    background-color: currentColor;
+                    opacity: 0;
+                }
+                &:hover::after{
+                    opacity: 1;
+                }
+            }
+
+            
+        }
+
+        // pseudoelementos X ----------------------------------
+        
+        //  rota
+        &__checkbox:checked + &__btn &__icon::after{
+            top: 0;
+            transform: rotate(-135deg);
+        }
+
+        // vuelve transparente el de en medio
+        &__checkbox:checked + &__btn &__icon{
+            background-color: transparent;
+        }
+
+        // rota
+        &__checkbox:checked + &__btn &__icon::before{
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        //  ----------------------------------------------------
+
+        &__checkbox:checked ~ &__nav{
+           opacity: 1;
+           visibility: visible;
+        }
+    
+
+    }
+
+}

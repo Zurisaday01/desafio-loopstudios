@@ -1,0 +1,24 @@
+// ------------------------------------------------
+// Obtener font-size ------------------------------
+/// Usar en _mixins.scss [@mixin font-size] -------
+// ------------------------------------------------
+
+@function get-font-size($elem) {
+    @return map-get($font__size, $elem);
+}
+
+// ------------------------------------------------
+// Obtener font-family ----------------------------
+/// Usar en _mixins.scss [@mixin font-size] -------
+// ------------------------------------------------
+@function get-font-family($elem) {
+    @return map-get($font__family, $elem);
+}
+
+
+// -------------------------------------------------
+// Obtener colors ----------------------------------
+//--------------------------------------------------
+@function color($elem, $variant) {
+    @return map-get( map-get($color, $elem), $variant);
+}

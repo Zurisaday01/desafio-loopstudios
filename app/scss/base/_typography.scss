@@ -1,0 +1,29 @@
+.heading{
+    @include font-family(heading);
+    text-transform: uppercase;
+    font-weight: 200;
+    line-height: 1;
+    
+    &--primary{
+        font-size: clamp(get-font-size(beta), 5vw, get-font-size(alfa)); //val min, val flexible, val max
+        color: color(primary, b);
+        margin: 0;
+
+        @include respond(m-small){
+            font-size:  clamp(4rem, 5vw, get-font-size(alfa));;
+        }
+
+        @include respond(x-tiny){
+            font-size: 9.6vw;
+        }
+    }
+
+    &--secondary{
+        font-size: clamp(get-font-size(gamma), 5vw, get-font-size(beta)); //val min, val flexible, val max
+        color: color(primary, a);
+    }
+
+    &--thirty{
+        font-size: clamp(2.5rem, 5vw, get-font-size(gamma)); 
+    }
+}

@@ -1,0 +1,73 @@
+.footer{
+
+    &__bg{
+        grid-column: 1 / -1;
+        grid-row: -2 / -1;
+        background-color: color(primary, a);
+        // el bg y el contain comparten el mismo margin-top para que se ajusten
+        margin-top: 15rem;
+        
+        @include respond(s-small){
+            margin-top: 10rem;
+        }
+    }
+    
+    &__contain{
+        grid-column: center-start / center-end;
+        grid-row: -2 / -1;
+        color: color(primary, b);
+        padding: 5rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1rem;
+        align-items: center;
+        // el bg y el contain comparten el mismo margin-top para que se ajusten
+        margin-top: 15rem;
+
+        @include respond(s-small){
+            margin-top: 10rem;
+        }
+    }
+
+    &__nav{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        transform: translateX(-9px);
+    }
+
+    &__social-media{
+        justify-self: end;
+    }
+
+    &__copy{
+        justify-self: end;
+        color: color(secondary, a);
+    }
+
+
+    @include respond(s-medium){
+
+        &__contain{
+            justify-items: center;
+
+            & > * {
+                grid-column: 1 / -1;
+            }
+        }
+       
+
+        &__nav{
+            margin-bottom: 2.8rem;
+            transform: translateX(0);
+        }
+        
+        &__social-media{
+            justify-self: center;
+        }
+    
+        &__copy{
+            justify-self: center;
+        }
+    }
+
+}

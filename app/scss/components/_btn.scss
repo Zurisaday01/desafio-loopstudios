@@ -1,0 +1,20 @@
+.btn{
+    outline: none;
+    background-color: transparent;
+    border: 2px solid color(primary, a);
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 15rem;
+    height: min-content;
+    letter-spacing: 3px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all .4s;
+    @include font-family(heading);
+
+
+    &:hover{
+        background-color: color(primary, a);
+        color: color(primary, b);
+    }
+}

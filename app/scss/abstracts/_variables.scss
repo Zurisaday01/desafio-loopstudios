@@ -1,0 +1,36 @@
+// ------------------------------------
+// Colors -----------------------------
+//-------------------------------------
+
+/// Crea un map que almacene las variables de los colores
+$color: (
+    primary: (
+        a:   #000,
+        b:   #ffff,
+    ),
+    secondary: (
+        a:   #8c8c8c,
+        b:   #696969
+    )
+);
+
+// ------------------------------------
+// Tipography--------------------------
+// ------------------------------------
+
+/// Crea un map de los tipos de fuentes que vas a usar
+$font__family: (
+    heading: '"Josefin Sans", sans-serif',
+    body: '"Alata", sans-serif'
+);
+
+
+// ------------------------------------
+// Font Size --------------------------
+// ------------------------------------
+$font__size: (
+    alfa: 7rem,
+    beta: 5rem, 
+    gamma: 3rem, 
+    delta: 1.5rem, 
+);

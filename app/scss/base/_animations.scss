@@ -1,0 +1,23 @@
+@keyframes bottom{
+    0%{
+        transform: translateY(-10rem);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes left{
+    0%{
+        transform: translateX(-8rem);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

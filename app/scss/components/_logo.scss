@@ -1,0 +1,25 @@
+.logo{
+
+    @include respond(small){
+        &--primary{
+            width: 16rem;
+            height: min-content;
+        }
+    }
+
+    &--primary{
+        animation: left 1.2s ease-in-out;
+    }
+
+    &--secondary{
+        width: 14rem;
+        height: min-content;
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

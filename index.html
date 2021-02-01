@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/css/style.css">
+  <title>Frontend Mentor | Loopstudios landing page</title>
+  <script src="./dist/main.js" async></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body class="container">
+  <header class="header">
+    <div class="logo logo--primary">
+      <img src="./images/logo.svg" alt="logo" class="logo__img">
+    </div>
+    <div class="nav">
+
+      <input type="checkbox" class="nav__checkbox" id="nav-toggle">
+
+      <!-- Al checkbox no se le pueden cambiar los estilos por eso su label pasará a ocupar su papel, porque a el si le podemos modificar los estilos -->
+      
+      <label for="nav-toggle" class="nav__btn">
+        <!-- Este va a ser la rayita, los pseudoelementos las otras rayitas -->
+        <span class="nav__icon"></span>
+      </label>
+      
+      <!-- ---------------------------------------------------------------------------------------------------------------- -->
+
+      <nav class="nav__nav">
+        <ul class="nav__list nav__list--hamburger">
+          <il class="nav__item nav__item--hamburger"><a href="#" class="nav__link">About</a></il>
+          <il class="nav__item nav__item--hamburger"><a href="#" class="nav__link">Careers</a></il>
+          <il class="nav__item nav__item--hamburger"><a href="#" class="nav__link">Events</a></il>
+          <il class="nav__item nav__item--hamburger"><a href="#" class="nav__link">Products</a></il>
+          <il class="nav__item nav__item--hamburger"><a href="#" class="nav__link">Support</a></il>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+  <div class="hero__bg">&nbsp;</div>
+  <div class="hero__contain">
+    <div class="hero__content">
+      <h1 class="heading heading--primary">
+        Immersive experiences that deliver
+      </h1>
+    </div>
+  </div>
+  <section class="section-information section-information__box-img">
+    <img src="./images/desktop/image-interactive.jpg" alt="Interactive" class="section-information__img">
+  </section>
+  <section class="section-information section-information__text">
+    <h2 class="heading heading--secondary u-mb-s "> The leader in interactive VR</h2>
+    <p class="paragraph">
+      Founded in 2011, Loopstudios has been producing world-class virtual reality 
+      projects for some of the best companies around the globe. Our award-winning 
+      creations have transformed businesses through digital experiences that bind 
+      to their brand.
+    </p>
+  </section>
+  <section class="section-creations">
+    <h2 class="heading heading--secondary section-creations__title">Our creations</h2>
+    <button class="btn section-creations__btn">See all</button>
+    <div class="section-creations--bottom">
+      <div class="creations">
+        <figure class="creations__card creations__card--1">
+          &nbsp;
+          <figcaption class="creations__title">
+            <h3 class="heading heading--thirty">Deep earth</h3>
+          </figcaption>
+        </figure>
+        <figure class="creations__card creations__card--2">
+          &nbsp;
+          <figcaption class="creations__title">
+            <h3 class="heading heading--thirty">Night arcade</h3>
+          </figcaption>
+        </figure>
+        <figure class="creations__card creations__card--3">
+          &nbsp;
+          <figcaption class="creations__title">
+            <h3 class="heading heading--thirty">Soccer team VR</h3>
+          </figcaption>
+        </figure>
+        <figure class="creations__card creations__card--4">
+          &nbsp;
+          <figcaption class="creations__title">
+            <h3 class="heading heading--thirty">The grid</h3>
+          </figcaption>
+        </figure>
+        <figure class="creations__card creations__card--5">
+          &nbsp;
+          <figcaption class="creations__title">
+            <h3 class="heading heading--thirty">From up above VR</h3>
+          </figcaption>
+        </figure>
+        <figure class="creations__card creations__card--6">
+          &nbsp;
+          <figcaption class="creations__title">
+            <h3 class="heading heading--thirty">Pocket borealis</h3>
+          </figcaption>
+        </figure>
+        <figure class="creations__card creations__card--7">
+          &nbsp;
+          <figcaption class="creations__title">
+            <h3 class="heading heading--thirty">The curiosity</h3>
+          </figcaption>
+        </figure>
+        <figure class="creations__card creations__card--8">
+          &nbsp;
+          <figcaption class="creations__title">
+            <h3 class="heading heading--thirty">Make it fisheye</h3>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <div class="footer__bg">&nbsp;</div>
+  <footer class="footer__contain">
+    <div class="logo logo--secondary">
+      <img src="./images/logo.svg" alt="logo" class="logo__img">
+    </div>
+    <nav class="nav footer__nav">
+      <ul class="nav__list nav__list--footer">
+        <il class="nav__item"><a href="#" class="nav__link">About</a></il>
+        <il class="nav__item"><a href="#" class="nav__link">Careers</a></il>
+        <il class="nav__item"><a href="#" class="nav__link">Events</a></il>
+        <il class="nav__item"><a href="#" class="nav__link">Products</a></il>
+        <il class="nav__item"><a href="#" class="nav__link">Support</a></il>
+      </ul>
+    </nav>
+    <div class="social-media footer__social-media">
+      <div class="social-media__media">
+        <svg class="social-media__icon">
+          <use href="./images/sprite.svg#icon-facebook2"></use>
+        </svg>
+      </div>
+      <div class="social-media__media">
+        <svg class="social-media__icon">
+          <use href="./images/sprite.svg#icon-twitter"></use>
+        </svg>
+      </div>
+      <div class="social-media__media">
+        <svg class="social-media__icon">
+          <use href="./images/sprite.svg#icon-pinterest"></use>
+        </svg>
+      </div>
+      <div class="social-media__media">
+        <svg class="social-media__icon">
+          <use href="./images/sprite.svg#icon-instagram"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="footer__copy">
+      <span class="footer__text-copy">&copy; 2021 Loopstudios. All rights reserved.</span>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <style>
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+</style> -->
+<!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Zurisaday Espadas</a>.
+</div> -->

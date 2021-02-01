@@ -1,0 +1,34 @@
+{
+  "name": "loopstudios-landing-page-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Loopstudios landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass ./app/scss/style.scss ./dist/css/style.css -w",
+    "serve": "browser-sync start --server --files \"/dist/css/*.css, /js/*.js, **/*.html\"",
+    "compile:sass": "node-sass ./app/scss/style.scss ./dist/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" ./dist/css/style.comp.css -o ./dist/css/style.prefix.css",
+    "compress:css": "node-sass ./dist/css/style.prefix.css ./dist/css/style.css --output-style compressed",
+    "build:css": "run-s compile:sass prefix:css compress:css",
+    "build": "run-s build:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.2.3",
+    "browser-sync": "^2.26.14",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-terser": "^2.0.1",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^8.3.1"
+  },
+  "devDependencies": {
+    "postcss": "^8.2.4"
+  }
+}

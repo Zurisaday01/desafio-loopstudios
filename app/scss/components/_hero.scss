@@ -1,0 +1,58 @@
+.hero{
+
+    &__bg{
+        grid-row: 1 / 3;
+        grid-column: full-start / full-end;
+        background-image: linear-gradient(rgba(color(primary, a), .4), rgba(color(primary, a), .4)), url(../../../images/desktop/image-hero.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -100;
+        position: relative;
+        overflow: hidden;
+    }
+
+
+    &__contain{
+        grid-column: center-start / center-end;
+        grid-row: 2 / 3;
+        display: flex;
+        align-items: center;
+    }
+
+    &__content{
+        border: 3px solid color(primary, b);
+        width: 41vw;
+        height: auto;
+        padding: 3rem 3.7rem;
+        animation: bottom 1.2s ease-in;
+
+        @include respond(xl-medium){
+            width: min-content;
+        }
+
+        @include respond(small){
+            width: 100%;
+        }
+
+        @include respond(tiny){
+            padding: 2.8rem 2rem;
+        }
+
+        @include respond(x-tiny){
+            padding: 1.8rem 2rem;
+        }
+
+
+    }
+}
+
+
+.hero-active{
+    background-image: linear-gradient(color(primary, a), color(primary, a));
+}
+
+.hero-content{
+    overflow: hidden;
+    opacity: 0;
+}
