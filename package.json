@@ -10,8 +10,7 @@
     "compile:sass": "node-sass ./app/scss/style.scss ./dist/css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" ./dist/css/style.comp.css -o ./dist/css/style.prefix.css",
     "compress:css": "node-sass ./dist/css/style.prefix.css ./dist/css/style.css --output-style compressed",
-    "build:css": "run-s compile:sass prefix:css compress:css",
-    "build": "run-s build:*"
+    "build:css": "run-s compile:sass prefix:css compress:css"
   },
   "keywords": [],
   "author": "",
